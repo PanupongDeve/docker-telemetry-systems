@@ -1,2 +1,2 @@
 #!/bin/sh
-docker network rm telemetry-systems 
+sudo docker network rm telemetry-systems 

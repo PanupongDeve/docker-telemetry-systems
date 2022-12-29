@@ -1,2 +1,2 @@
 #!/bin/sh
-docker network create -d bridge telemetry-systems
+sudo docker network create -d bridge telemetry-systems
