@@ -40,5 +40,7 @@ setup.kibana:
 
 
 sudo metricbeat modules enable system
+sudo metricbeat modules enable docker
+https://www.elastic.co/guide/en/beats/metricbeat/7.17/metricbeat-module-docker.html
 sudo metricbeat setup
 sudo service metricbeat start
