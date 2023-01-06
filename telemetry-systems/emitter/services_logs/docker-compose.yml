@@ -1,0 +1,23 @@
+version: '3'
+services:
+  fluentd:
+    container_name: fluentd
+    build: ./fluentd
+    restart: always
+    networks:
+      - telemetry-systems
+    user: root
+    volumes:
+        - ./fluentd/conf:/fluentd/etc
+        - ./source_log:/fluentd/source_log:rw
+        - /var/log:/var/host_log:rw
+    ports:
+        - 24224:24224
+        - 24224:24224/udp
+
+
+
+
+networks:
+  telemetry-systems:
+    external: true

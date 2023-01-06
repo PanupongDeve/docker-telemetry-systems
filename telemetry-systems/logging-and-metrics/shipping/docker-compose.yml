@@ -1,0 +1,25 @@
+version: '3'
+services:
+  fluentd:
+    container_name: fluentd
+    build: ./fluentd
+    restart: always
+    networks:
+      - telemetry-systems
+    user: root
+    volumes:
+        - /var/lib/docker/containers:/var/lib/docker/containers
+        - ./fluentd/conf:/fluentd/etc
+        - /var/log/fluentd:/fluentd/log:rw
+    ports:
+        - 24224:24224
+        - 24224:24224/udp
+  # debugger:
+  #   image: panupongdeve/debugger:latest
+  #   networks:
+  #     - telemetry-systems
+
+
+networks:
+  telemetry-systems:
+    external: true
