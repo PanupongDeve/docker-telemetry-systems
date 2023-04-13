@@ -9,6 +9,7 @@ elasticsearch.hosts: [ "http://elasticsearch:9200" ]
 monitoring.ui.container.elasticsearch.enabled: true
 elasticsearch.username: "kibana_system"
 elasticsearch.password: "JFvzspAuumB0X8665fYO"
+xpack.security.enabled: true
 # randomstring -> http://www.unit-conversion.info/texttools/random-string-generator/
 xpack.security.encryptionKey: "W7B5l0cvm9wej2BlQoCBaAirFbNKfVRF"
 xpack.encryptedSavedObjects.encryptionKey: "W7B5l0cvm9wej2BlQoCBaAirFbNKfVRF"
