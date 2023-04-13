@@ -16,10 +16,14 @@ services:
       - "9200:9200"
     environment:
       - node.name=es01
-      - cluster.name=es-docker-cluster
+      # - cluster.name=es-docker-cluster
       - bootstrap.memory_lock=false
-      - cluster.initial_master_nodes=es01
+      # - cluster.initial_master_nodes=es01
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=true
+      - xpack.security.authc.api_key.enabled=true
+      - discovery.type=single-node
+      - search.allow_expensive_queries=true
     volumes:
       - ./elasticsearch/data:/usr/share/elasticsearch/data
   kibana:
