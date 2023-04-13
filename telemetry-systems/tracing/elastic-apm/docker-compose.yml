@@ -36,6 +36,8 @@ services:
          -E setup.template.settings.index.number_of_replicas=0
          -E apm-server.kibana.enabled=true
          -E apm-server.kibana.host=kibana:5601
+         -E apm-server.kibana.username=elastic
+         -E apm-server.kibana.password=sgszH6qzhtycbQEtnLEU
          -E output.elasticsearch.hosts=["elasticsearch:9200"]
          -E output.elasticsearch.username=elastic
          -E output.elasticsearch.password=sgszH6qzhtycbQEtnLEU
