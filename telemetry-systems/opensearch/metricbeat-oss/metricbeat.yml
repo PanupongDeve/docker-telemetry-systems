@@ -1,0 +1,11 @@
+output.elasticsearch:
+  hosts: ["192.168.90.3:9200"]
+
+setup.kibana:
+  host: "192.168.90.3:5601"
+
+metricbeat.config.modules:
+  enabled: true
+  path: /etc/metricbeat/modules.d/*.yml
+  
+setup.ilm.overwrite: true
