@@ -1,3 +1,4 @@
 telemetry-systems/logging-and-metrics/monitoring/elasticsearch/*
 account-note.md
 node_modules
+grafana-volume
